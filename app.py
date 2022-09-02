@@ -5,9 +5,6 @@ import pandas as pd
 import pickle
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import robust_scale
-import plotly.express as px
-import plotly.graph_objects as go
-from plotly import tools
 
 
 # Title
@@ -61,13 +58,14 @@ info = user_input()
 
 diamond = pd.read_csv('clean_diamonds.csv')
 
-
-
 # Data Visualization
-if st.button('Data Visualization'):
+st.subheader('Data visualization')
+
+# Data visualization button
+if st.button('Show visualizations'):
 
     # CARAT
-    st.header('CARAT')
+    st.subheader('CARAT')
     sns.set_theme(style='darkgrid')
     fig1 = plt.figure(figsize=(12,15))
     plt.subplot(2,1,1)
@@ -81,7 +79,7 @@ if st.button('Data Visualization'):
     st.write('---')
 
     # CUT
-    st.header('CUT')
+    st.subheader('CUT')
     fig2 = plt.figure(figsize=(12,15))
     plt.style.use('tableau-colorblind10')
     plt.subplot(2,2,1)
@@ -102,7 +100,7 @@ if st.button('Data Visualization'):
     st.write('---')
 
     # COLOR 
-    st.header('COLOR')
+    st.subheader('COLOR')
     fig3 = plt.figure(figsize=(12,15))
     plt.style.use('ggplot')
     plt.subplot(2,2,1)
@@ -123,7 +121,7 @@ if st.button('Data Visualization'):
     st.write('---')
 
     # CLARITY
-    st.header('CLARITY')
+    st.subheader('CLARITY')
     fig4 = plt.figure(figsize=(12,15))
     plt.style.use('tableau-colorblind10')
     plt.subplot(2,2,1)
@@ -144,8 +142,8 @@ if st.button('Data Visualization'):
     st.write('---')
 
     # DEPTH
-    st.header('DEPTH')
-    fig5 = plt.figure(figsize=(12,12))
+    st.subheader('DEPTH')
+    fig5 = plt.figure(figsize=(12,15))
     plt.subplot(2,1,1)
     sns.histplot(data=diamond, x='depth', color='mediumblue', kde=True)
     plt.title('Depth distribution', fontdict={'fontsize':18})
@@ -156,9 +154,9 @@ if st.button('Data Visualization'):
 
     st.write('---')
 
-    # Description about TABLE
-    st.header('TABLE')
-    fig6 = plt.figure(figsize=(12,12))
+    # TABLE
+    st.subheader('TABLE')
+    fig6 = plt.figure(figsize=(12,15))
     plt.subplot(2,1,1)
     sns.histplot(data=diamond, x='table', color='darkgreen', kde=True, bins=50)
     plt.title('Table countplot', fontdict={'fontsize':18})
@@ -169,8 +167,8 @@ if st.button('Data Visualization'):
 
     st.write('---')
 
-    # Description about PRICE
-    st.header('PRICE')
+    # PRICE
+    st.subheader('PRICE')
     fig7 = plt.figure(figsize=(12, 12))
     plt.subplot(2,1,1)
     sns.histplot(data=diamond, x='price', color='sandybrown', kde=True, bins=30)
@@ -182,8 +180,8 @@ if st.button('Data Visualization'):
 
     st.write('---')
 
-    # Description about X
-    st.header('X')
+    # X
+    st.subheader('X')
     fig8 = plt.figure(figsize=(10,15))
     plt.subplot(2,1,1)
     sns.histplot(data=diamond, x='x', color='palevioletred', kde=True)
@@ -195,8 +193,8 @@ if st.button('Data Visualization'):
 
     st.write('---')
 
-    # Description about Y
-    st.header('Y')
+    # Y
+    st.subheader('Y')
     fig9 = plt.figure(figsize=(10,15))
     plt.subplot(2,1,1)
     sns.histplot(data=diamond, x='y', color='indigo', kde=True)
@@ -208,8 +206,8 @@ if st.button('Data Visualization'):
 
     st.write('---')
 
-    # Description about Z
-    st.header('Z')
+    # Z
+    st.subheader('Z')
     fig10 = plt.figure(figsize=(10,15))
     plt.subplot(2,1,1)
     sns.histplot(data=diamond, x='z', color='crimson', kde=True)
@@ -221,7 +219,8 @@ if st.button('Data Visualization'):
 
     st.write('---')
 
-    st.header('Intercorrelation Matrix Heatmap')
+    # Intercorrelation Matrix Heatmap
+    st.subheader('Intercorrelation Matrix Heatmap')
     fig = plt.figure(figsize=(12,10))
     aux = diamond.drop(columns=['index'])
     sns.heatmap(aux.corr(), annot=True, cmap='GnBu')
@@ -229,32 +228,41 @@ if st.button('Data Visualization'):
 
 st.write('---')
 
+# Model Prediction button
+st.subheader('Model Prediction')
+
+# Drop unnecessary columns
 diamonds = diamond.drop(columns=['price','index'])
 df = pd.concat([info,diamonds],axis=0)
-st.write(df[:1])
+st.write(df[:1])    # Show the first line
 
+# Predict button
 if st.button('Predict'):
 
+    ## Preprocessing 
     df.drop(columns=['table','depth'], inplace=True)
 
+    # Encode categorical variables
     encode = ['cut','color','clarity']
 
+    # Apply LabelEncoder
     le = LabelEncoder()
     for col in encode:
         df['cut'] = le.fit_transform(df['cut'])
         df['color'] = le.fit_transform(df['color'])
         df['clarity'] = le.fit_transform(df['clarity'])
 
-
+    # Apply robust_scale for all numeric values
     df = robust_scale(df)
     df = df[:1]
 
+    # Load model
     model=''
-    # Se carga el modelo
     if model=='':
         with open(MODEL_PATH, 'rb') as file:
             model = pickle.load(file)
 
+    # Prediction
     pred = model.predict(df)
     st.write('$',pred[0])
     st.write('---')
