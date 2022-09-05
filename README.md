@@ -28,7 +28,7 @@ This project contains the following libraries:
 - [Seaborn](https://seaborn.pydata.org/index.html) - Visualization
 - [Sklearn](https://scikit-learn.org/stable/) - Machine Learning (Model)
 - [Auto-sklearn](https://automl.github.io/auto-sklearn/master/index.html#) - AutoML (Model Selection) 
-- [Streamlit](https://www.google.com/search?channel=fs&client=ubuntu&q=streamlit) - Framework to create web apps 
+- [Streamlit](https://streamlit.io/) - Framework to create web apps 
 
 ## Installl 🛠
 
