@@ -56,6 +56,7 @@ else:
 
 info = user_input()
 
+# Load clean data
 diamond = pd.read_csv('clean_diamonds.csv')
 
 # Data Visualization
@@ -228,7 +229,7 @@ if st.button('Show visualizations'):
 
 st.write('---')
 
-# Model Prediction button
+
 st.subheader('Model Prediction')
 
 # Drop unnecessary columns
