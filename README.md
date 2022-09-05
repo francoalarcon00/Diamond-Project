@@ -22,7 +22,7 @@ This dataset contains the prices and other attributes of almost 54,000 diamonds.
 
 ## Tech 🛡
 
-Este proyecto contiene las siguientes librerias:
+This project contains the following libraries:
 - [Pandas](https://pandas.pydata.org/) - Data Manipulation
 - [Matplotlib](https://matplotlib.org/stable/index.html) - Visualization
 - [Seaborn](https://seaborn.pydata.org/index.html) - Visualization
