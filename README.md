@@ -31,7 +31,7 @@ This project contains the following libraries:
 
 ## Installl 🛠
 
-If you want to run locally on your computer, this project requires Linux, Jupyter Notebook in your preferred IDE and [Python3.9.x](https://www.python.org/) en adelante. 
+If you want to run locally on your computer, this project requires Linux, Jupyter Notebook in your preferred IDE and [Python>=3.9.x](https://www.python.org/) en adelante. 
 
 After cloning or downloading it, please open the terminal (in same path where local repository is located) and run this command:  
 
