@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ### Problem
-This dataset contains the prices and other attributes of almost 54,000 diamonds. I done an EDA, Data Visualization and Machine Learning model to predict de diamond's price
+This dataset contains the prices and other attributes of almost 54,000 diamonds. I done an EDA, Data Visualization and Machine Learning model to predict diamond's price
 
 ## Features 👀
 1. Price: price in US dollars ($326 to $18,823)
