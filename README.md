@@ -41,7 +41,14 @@ pip install -r requirements.txt
 ```
 This will download and install the requirements needed. In order to install auto-sklearn, please read the official [documentation](https://automl.github.io/auto-sklearn/master/installation.html).
 
-### Demo
+## Let's run it 🦉
+Please open the terminal (in same path where local repository is located) and run this command:  
+
+```
+streamlit run app.py
+```
+This command run the web app in your browser
+## Demo 🪐
 
 https://huggingface.co/spaces/francoalarcon00/diamond-app
 
