@@ -41,6 +41,10 @@ pip install -r requirements.txt
 ```
 This will download and install the requirements needed. In order to install auto-sklearn, please read the official [documentation](https://automl.github.io/auto-sklearn/master/installation.html).
 
+### Demo
+
+https://huggingface.co/spaces/francoalarcon00/diamond-app
+
 ## Step by Step Analysis
 
 1. Run data_cleaning.ipynb --> Clean process
