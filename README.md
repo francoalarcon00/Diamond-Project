@@ -39,8 +39,7 @@ After cloning or downloading it, please open the terminal (in same path where lo
 ```
 pip install -r requirements.txt
 ```
-This will download and install the requirements needed
-In order to install auto-sklearn, please read the official [documentation](https://automl.github.io/auto-sklearn/master/installation.html).
+This will download and install the requirements needed. In order to install auto-sklearn, please read the official [documentation](https://automl.github.io/auto-sklearn/master/installation.html).
 
 ## Step by Step Analysis
 
@@ -55,5 +54,5 @@ In order to install auto-sklearn, please read the official [documentation](https
 
 https://www.kaggle.com/datasets/shivam2503/diamonds
 
-## Autor 🖋
+## Author 🖋
 *Franco Nicolás Alarcón*
