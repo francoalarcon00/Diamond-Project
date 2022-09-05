@@ -66,4 +66,4 @@ https://huggingface.co/spaces/francoalarcon00/diamond-app
 https://www.kaggle.com/datasets/shivam2503/diamonds
 
 ## Author 🖋
-*Franco Nicolás Alarcón*
+*Franco Nicolás Alarcón* 🤟
