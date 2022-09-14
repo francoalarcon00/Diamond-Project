@@ -50,7 +50,7 @@ streamlit run app.py
 This command run the web app in your browser
 ## Demo 🪐
 
-https://huggingface.co/spaces/francoalarcon00/diamond-app
+[Diamond-App](https://huggingface.co/spaces/francoalarcon00/diamond-app)
 
 ## Step by Step Analysis
 
