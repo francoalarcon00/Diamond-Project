@@ -6,13 +6,13 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ### Problem
-This dataset contains the prices and other attributes of almost 54,000 diamonds. I done an EDA, Data Visualization and Machine Learning model to predict diamond's price
+This dataset contains the prices and other attributes of almost 54,000 diamonds. I've done an EDA, Data Visualization and Machine Learning model to predict diamond's price
 
 ## Features 👀
 1. Price: price in US dollars ($326 to $18,823)
 3. Carat: weight of the diamond (0.2 to 5.01)
 4. Cut: quality of the cut (Fair, Good, Very Good, Premium, Ideal)
-5. Color: diamond colour, from J (worst) to D (best)
+5. Color: diamond color, from J (worst) to D (best)
 6. Clarity: a measurement of how clear the diamond is (I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best))
 7. X: length in mm (0 to 10.74)
 8. Y: width in mm (0 to 58.9)
